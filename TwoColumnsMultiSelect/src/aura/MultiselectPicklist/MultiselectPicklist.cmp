@@ -1,0 +1,24 @@
+<aura:component >
+<aura:attribute name="availablePickList" type="String[]"  description="Available picklists"/>
+<aura:attribute name="selectedPickList" type="String[]" description="Available picklists"/>
+
+<div class="slds-grid">
+  <div>
+  		<ui:inputSelect multiple="true" aura:Id="availablePList" class="multiselect">
+	  		<aura:iteration items="{!v.availablePickList}" var="val">
+	  			<ui:inputSelectOption text="{!val}" label="{!val}" value="true"/>
+	  		</aura:iteration>
+    	</ui:inputSelect></div>
+  <div><br/><br/>
+	   <lightning:button class="slds-button" label=">>" onclick="{! c.selectValues }"/><br/>
+  	   <lightning:button class="slds-button" label="&lt;&lt;" onclick="{! c.deselectValues }"/>
+  </div>
+    <div>
+  		<ui:inputSelect multiple="true" aura:Id="selectedPList" class="multiselect">
+	  		<aura:iteration items="{!v.selectedPickList}" var="val">
+	  			<ui:inputSelectOption text="{!val}" label="{!val}" value="true"/>
+	  		</aura:iteration>
+    	</ui:inputSelect>
+    </div>
+</div>
+</aura:component>

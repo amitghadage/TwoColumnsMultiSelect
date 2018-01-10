@@ -1,5 +1,6 @@
 # TwoColumnsMultiSelect
 Two columns multiselect picklist lightning component
+detailed blog post : http://amitghadage.blogspot.in/2018/01/two-columns-multi-select-picklist.html
 
 1) How to use MultiselectPicklist component.
 
